@@ -31,28 +31,28 @@
     <script src="codemirror/codemirror-5.65.12/lib/codemirror.js"></script>
     <script src="codemirror/codemirror-5.65.12/mode/clike/clike.js"></script>
     <script src="codemirror/codemirror-5.65.12/addon/edit/closebrackets.js"></script>
+    <script src="codemirror/codemirror-5.65.12/mode/python/python.js"></script>
   </head>
 
   <body>
     <div class="row m-3">
       <!--  & codespace  -->
       <div class="col">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between mb-2 bg-dark rounded p-2">
           <div class="col-12 w-25">
             <label class="visually-hidden" for="inlineFormSelectPref"
               >Preference</label
             >
             <select class="form-select" id="inlineFormSelectPref">
               <option selected>Choose...</option>
-              <option value="C">C</option>
               <option value="C++">C++</option>
               <option value="Java">Java</option>
               <option value="Python">Python</option>
-              <option value="Javascript">Javascript</option>
-              <option value="Ruby">Ruby</option>
             </select>
           </div>
-          <p>COMPILER BY AYUSHSONONE07</p>
+
+          <p class="text-light">ONLINE COMPILER BY AYUSHSONONE07</p>
+
           <div>
             <button type="button" class="btn btn-success">
               <i class="bi bi-play-fill">Run</i>
