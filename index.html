@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OnlineCodeCompiler</title>
+    <title>OnCode</title>
 
     <!--  & links -->
     <link
@@ -26,6 +26,7 @@
     <script src="codemirror-5.65.12/mode/clike/clike.js"></script>
     <script src="codemirror-5.65.12/addon/edit/closebrackets.js"></script>
     <script src="codemirror-5.65.12/mode/python/python.js"></script>
+    <script src="codemirror-5.65.12/mode/javascript/javascript.js"></script>
   </head>
 
   <body>
@@ -42,10 +43,11 @@
               <option value="C++">C++</option>
               <option value="Java">Java</option>
               <option value="Python">Python</option>
+              <option value="Javascript">Javascript</option>
             </select>
           </div>
 
-          <p class="text-light">ONLINE COMPILER BY AYUSHSONONE07</p>
+          <h4 class="text-light">ONCODE</h4>
 
           <div>
             <button type="button" class="btn btn-success">
@@ -72,6 +74,29 @@
       </div>
     </div>
 
-    <script src="index.js"></script>
+    <script>
+      let editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        mode: "text/x-c++src",
+        theme: "dracula",
+        lineNumbers: true,
+        autoCloseBracket: true,
+      });
+
+      let width = window.innerWidth;
+      editor.setSize(0.7 * width, "500");
+
+      let option = document.getElementById("inlineFormSelectPref");
+      option.addEventListener("change", function () {
+        if (option.value == Java) {
+          editor.setOption("mode", "text/x-java");
+        } else if (option.value == Python) {
+          editor.setOption("mode", "text/x-python");
+        } else if (option.value == Cpp) {
+          editor.setOption("mode", "text/x-c++src");
+        } else {
+          editor.setOption("mode", "text/x-javascript");
+        }
+      });
+    </script>
   </body>
 </html>
