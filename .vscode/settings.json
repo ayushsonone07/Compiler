@@ -2,5 +2,10 @@
     "thunder-client.certificates": [],
     "thunder-client.saveToWorkspace": true,
     "thunder-client.showActivityFromCollection": true,
-    "thunder-client.headersCaseSensitive": true
+    "thunder-client.headersCaseSensitive": true,
+    "thunder-client.previewFeatures": true,
+    "thunder-client.saveTokenPerEnvironment": true,
+    "thunder-client.sidebar.deleteWithoutPrompt": true,
+    "thunder-client.sidebar.showActivityFromCollection": true,
+    "thunder-client.sidebar.hideDateModified": true
 }
